@@ -1,0 +1,77 @@
+﻿@model IEnumerable<WebChuyennganh.Models.BaiViet>
+
+@{
+    ViewBag.Title = "Bài viết";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="h3 mb-2 text-gray-800">Danh sách bài viết</h2>
+
+<p>
+    <a class="btn btn-success" href="@Url.Action("Create", "BaiViets")">Thêm mới</a>
+</p>
+
+<div class="card shadow mb-4">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>
+                            Tiêu đề
+                        </th>
+                        <th>
+                            Ảnh bìa
+                        </th>
+                        <th>
+                            Đăng bởi
+                        </th>
+                        <th>
+                            Cập nhật bởi
+                        </th>
+                        <th>
+                            Ngày đăng
+                        </th>
+                        <th>
+                            Ngày cập nhật
+                        </th>
+                        <th>
+                            Hành động
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>
+                            <a href="@Url.Action("Details", "BaiViets", new { id = item.MaBV })">
+                                @Html.DisplayFor(modelItem => item.TenBV)
+                            </a>
+                        </td>
+                        <td>
+                            <img src="@Url.Content(item.HinhDD)" style="max-width:120px;" />
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NhanVien1.TaiKhoan)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NhanVien.TaiKhoan)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NgayDang)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NgayCapNhat)
+                        </td>
+                        <td>
+                            <a class="btn btn-warning" href="@Url.Action("Edit", "BaiViets", new { id = item.MaBV })">Chỉnh sửa</a> |
+                            <a class="btn btn-danger" href="@Url.Action("Delete", "BaiViets", new { id = item.MaBV })">Xóa</a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

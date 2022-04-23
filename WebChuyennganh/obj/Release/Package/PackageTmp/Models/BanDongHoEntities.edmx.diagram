@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="11b36a6afef84c1ca42864c3427f7fee" Name="Diagram1">
+        <EntityTypeShape EntityType="db_BanDongHoModel.BaiViet" Width="1.5" PointX="5.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_BanDongHoModel.CTDonHang" Width="1.5" PointX="10.5" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_BanDongHoModel.CTPhieuNhap" Width="1.5" PointX="10.5" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_BanDongHoModel.DongHo" Width="1.5" PointX="8.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_BanDongHoModel.DonHang" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_BanDongHoModel.KhachHang" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_BanDongHoModel.NhaCungCap" Width="1.5" PointX="3" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_BanDongHoModel.NhanVien" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_BanDongHoModel.Nhom" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_BanDongHoModel.PhanHoi" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_BanDongHoModel.PhieuNhap" Width="1.5" PointX="5.25" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_BanDongHoModel.ThuongHieu" Width="1.5" PointX="6" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_BanDongHoModel.TrangThai" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="db_BanDongHoModel.FK_BaiViet_TaiKhoanCapNhat" ManuallyRouted="false" />
+        <AssociationConnector Association="db_BanDongHoModel.FK_BaiViet_TaiKhoanDang" ManuallyRouted="false" />
+        <AssociationConnector Association="db_BanDongHoModel.FK_CTDonHang_DongHo" ManuallyRouted="false" />
+        <AssociationConnector Association="db_BanDongHoModel.FK_CTDonHang_DonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="db_BanDongHoModel.FK_CTPhieuNhap_DongHo" ManuallyRouted="false" />
+        <AssociationConnector Association="db_BanDongHoModel.FK_CTPhieuNhap_PhieuNhap" ManuallyRouted="false" />
+        <AssociationConnector Association="db_BanDongHoModel.FK_DongHo_TaiKhoanCapNhat" ManuallyRouted="false" />
+        <AssociationConnector Association="db_BanDongHoModel.FK_DongHo_TaiKhoanDang" ManuallyRouted="false" />
+        <AssociationConnector Association="db_BanDongHoModel.FK_DongHo_ThuongHieu" ManuallyRouted="false" />
+        <AssociationConnector Association="db_BanDongHoModel.FK_DonHang_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="db_BanDongHoModel.FK_DonHang_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="db_BanDongHoModel.FK_DonHang_TrangThai" ManuallyRouted="false" />
+        <AssociationConnector Association="db_BanDongHoModel.FK_PhieuNhap_NhaCungCap" ManuallyRouted="false" />
+        <AssociationConnector Association="db_BanDongHoModel.FK_NhanVien_Nhom" ManuallyRouted="false" />
+        <AssociationConnector Association="db_BanDongHoModel.FK_PhieuNhap_NhanVienCapNhat" ManuallyRouted="false" />
+        <AssociationConnector Association="db_BanDongHoModel.FK_PhieuNhap_NhanVienLap" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

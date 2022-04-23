@@ -1,0 +1,80 @@
+﻿@model WebChuyennganh.Models.PhanHoi
+
+@{
+    ViewBag.Title = "Xóa phản hồi";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="h3 mb-2 text-gray-800">Xóa phản hồi</h2>
+
+<h5>Bạn có chắc muốn xóa đối tượng?</h5>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HoTen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayGui)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayGui)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChuDe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChuDe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoiDung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoiDung)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrangThai)
+        </dt>
+
+        <dd>
+            @if (Model.TrangThai)
+            {
+                <span>Đã đọc</span>
+            }
+            else
+            {
+                <span>Chưa đọc</span>
+            }
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-danger" /> |
+            <a class="btn btn-primary" href="@Url.Action("Index", "PhanHois")">Về danh sách</a>
+        </div>
+    }
+</div>

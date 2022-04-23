@@ -1,0 +1,73 @@
+﻿@model WebChuyennganh.Models.BaiViet
+
+@{
+    ViewBag.Title = "Chi tiết bài viết";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="h3 mb-2 text-gray-800">Chi tiết bài viết</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenBV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenBV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhDD)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.HinhDD)" style="max-width:300px;" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoiDung)
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.NoiDung.ToString())
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenTKDang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenTKDang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenTKCapNhat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenTKCapNhat)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayDang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayDang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayCapNhat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayCapNhat)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a class="btn btn-warning" href="@Url.Action("Edit", "BaiViets", new { id = Model.MaBV })">Chỉnh sửa</a> |
+    <a class="btn btn-primary" href="@Url.Action("Index", "BaiViets")">Về danh sách</a>
+</p>

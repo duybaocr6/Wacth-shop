@@ -1,0 +1,34 @@
+﻿@model WebChuyennganh.Models.ThuongHieu
+
+@{
+    ViewBag.Title = "Chi tiết thương hiệu";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="h3 mb-2 text-gray-800">Chi tiết thương hiệu</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenTH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenTH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhDD)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.HinhDD)" style="max-width:140px;" />
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a class="btn btn-warning" href="@Url.Action("Edit", "ThuongHieux", new { id = Model.MaTH })">Chỉnh sửa</a> |
+    <a class="btn btn-primary" href="@Url.Action("Index", "ThuongHieux")">Về danh sách</a>
+</p>

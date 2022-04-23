@@ -1,0 +1,41 @@
+﻿@model WebChuyennganh.Models.ThuongHieu
+
+@{
+    ViewBag.Title = "Xóa thương hiệu";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="h3 mb-2 text-gray-800">Xóa thương hiệu</h2>
+
+<h5>Bạn có chắc muốn xóa đối tượng?</h5>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenTH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenTH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhDD)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.HinhDD)" style="max-width:140px;" />
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-danger" /> |
+            <a class="btn btn-primary" href="@Url.Action("Index", "ThuongHieux")">Về danh sách</a>
+        </div>
+    }
+</div>

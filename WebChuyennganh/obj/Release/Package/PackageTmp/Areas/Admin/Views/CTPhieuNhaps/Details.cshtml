@@ -1,0 +1,66 @@
+﻿@model WebChuyennganh.Models.CTPhieuNhap
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="h3 mb-2 text-gray-800">Chi tiết chi tiết phiếu nhập</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PhieuNhap.SoPN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhieuNhap.SoPN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DongHo.MaDH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DongHo.MaDH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DongHo.HinhDD)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.DongHo.HinhDD)" style="max-width:140px;" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaTien)
+        </dt>
+
+        <dd>
+            @Model.GiaTien.ToString("#,##0.00")
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThanhTien)
+        </dt>
+
+        <dd>
+            @Model.ThanhTien.ToString("#,##0.00")
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a class="btn btn-warning" href="@Url.Action("Edit", "CTPhieuNhaps", new { id1 = Model.SoPN, id2 = Model.MaDH })">Chỉnh sửa</a> |
+    <a class="btn btn-primary" href="@Url.Action("Index", "CTPhieuNhaps")">Về danh sách</a>
+</p>

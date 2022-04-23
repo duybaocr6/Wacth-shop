@@ -1,0 +1,82 @@
+﻿@model IEnumerable<WebChuyennganh.Models.PhieuNhap>
+
+@{
+    ViewBag.Title = "Phiếu nhập";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="h3 mb-2 text-gray-800">Danh sách phiếu nhập</h2>
+
+<p>
+    <a class="btn btn-success" href="@Url.Action("Create", "PhieuNhaps")">Lập phiếu</a>
+</p>
+
+<div class="card shadow mb-4">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>
+                            Số phiếu nhập
+                        </th>
+                        <th>
+                            Nhà cung cấp
+                        </th>
+                        <th>
+                            Tổng số nhập
+                        </th>
+                        <th>
+                            Thanh toán
+                        </th>
+                        <th>
+                            Ngày nhập
+                        </th>
+                        <th>
+                            Ngày cập nhật
+                        </th>
+                        <th>
+                            Nhập hàng
+                        </th>
+                        <th>
+                            Hành động
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SoPN)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NhaCungCap.TenNCC)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TongSoNhap)
+                        </td>
+                        <td>
+                            @item.ThanhToan.ToString("#,##0.00")
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NgayNhap)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NgayCapNhat)
+                        </td>
+                        <td>
+                            <a class="btn btn-success" href="@Url.Action("Create", "CTPhieuNhaps", new { id = item.SoPN })">Thêm hàng</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-info" href="@Url.Action("Details", "PhieuNhaps", new { id = item.SoPN })">Chi tiết</a> |
+                            <a class="btn btn-warning" href="@Url.Action("Edit", "PhieuNhaps", new { id = item.SoPN })">Chỉnh sửa</a> |
+                            <a class="btn btn-danger" href="@Url.Action("Delete", "PhieuNhaps", new { id = item.SoPN })">Xóa</a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

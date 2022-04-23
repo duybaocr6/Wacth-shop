@@ -1,0 +1,208 @@
+﻿@model WebChuyennganh.Models.DongHo
+
+@{
+    ViewBag.Title = "Xóa đồng hồ";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="h3 mb-2 text-gray-800">Xóa đồng hồ</h2>
+
+<h5>Bạn có chắc muốn xóa đối tượng?</h5>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaDH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaDH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhDD)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.HinhDD)" style="max-width:300px;" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThuongHieu.TenTH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThuongHieu.TenTH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NguonGoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NguonGoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KieuMay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KieuMay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KichCo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KichCo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChatLieuVo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChatLieuVo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChatLieuDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChatLieuDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChatLieuKinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChatLieuKinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoChiuNuoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoChiuNuoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChucNangKhac)
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.ChucNangKhac)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GioiTinh)
+        </dt>
+
+        <dd>
+            @if (Model.GioiTinh)
+            {
+                <span>Nam</span>
+            }
+            else
+            {
+                <span>Nữ</span>
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MoTaCT)
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.MoTaCT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaBan)
+        </dt>
+
+        <dd>
+            @Model.GiaBan.ToString("#,##0.00")
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiamGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiamGia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaoHanh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaoHanh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenTKDang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenTKDang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenTKCapNhat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenTKCapNhat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayDang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayDang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayCapNhat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayCapNhat)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-danger" /> |
+            <a class="btn btn-primary" href="@Url.Action("Index", "DongHoes")">Về danh sách</a>
+        </div>
+    }
+</div>

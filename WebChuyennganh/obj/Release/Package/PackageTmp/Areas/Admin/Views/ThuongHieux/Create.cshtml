@@ -1,0 +1,50 @@
+﻿@model WebChuyennganh.Models.ThuongHieu
+
+@{
+    ViewBag.Title = "Thêm thương hiệu";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="h3 mb-2 text-gray-800">Thêm mới thương hiệu</h2>
+
+@using (Html.BeginForm("Create", "ThuongHieux", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.TenTH, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TenTH, new { htmlAttributes = new { @class = "form-control", @maxlength = "50" } })
+                @Html.ValidationMessageFor(model => model.TenTH, "", new { @class = "text-danger" })
+                <span class = "text-danger">@ViewData["TrongTenTH"]</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HinhDD, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                Chọn ảnh
+                <input type="file" name="fileUpload" />
+                @Html.ValidationMessageFor(model => model.HinhDD, "", new { @class = "text-danger" })
+                <span class = "text-danger">@ViewData["TrongHinhDD"]</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Thêm mới" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    <a class="btn btn-primary" href="@Url.Action("Index", "ThuongHieux")">Về danh sách</a>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

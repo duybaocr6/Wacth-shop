@@ -1,0 +1,80 @@
+﻿@model WebChuyennganh.Models.BaiViet
+
+@{
+    ViewBag.Title = "Xóa bài viết";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="h3 mb-2 text-gray-800">Xóa bài viết</h2>
+
+<h5 class="h3 mb-2 text-gray-800">Bạn có chắc muốn xóa đối tượng?</h5>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenBV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenBV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhDD)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.HinhDD)" style="max-width:300px;" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoiDung)
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.NoiDung.ToString())
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenTKDang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenTKDang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenTKCapNhat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenTKCapNhat)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayDang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayDang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayCapNhat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayCapNhat)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-danger" /> |
+            <a class="btn btn-primary" href="@Url.Action("Index", "BaiViets")">Về danh sách</a>
+        </div>
+    }
+</div>

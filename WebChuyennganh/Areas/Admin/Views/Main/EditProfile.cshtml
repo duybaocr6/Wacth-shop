@@ -1,0 +1,148 @@
+﻿@model WebChuyennganh.Models.NhanVien
+
+@{
+    ViewBag.Title = "Sửa thông tin cá nhân";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    body {
+        background: rgb(99, 39, 120)
+    }
+
+    .form-control:focus {
+        box-shadow: none;
+        border-color: #BA68C8
+    }
+
+    .profile-button {
+        background: rgb(99, 39, 120);
+        box-shadow: none;
+        border: none
+    }
+
+    .profile-button:hover {
+        background: #682773
+    }
+
+    .profile-button:focus {
+        background: #682773;
+        box-shadow: none
+    }
+
+    .profile-button:active {
+        background: #682773;
+        box-shadow: none
+    }
+
+    .back:hover {
+        color: #682773;
+        cursor: pointer
+    }
+
+    .labels {
+        font-size: 11px
+    }
+
+    .add-experience:hover {
+        background: #BA68C8;
+        color: #fff;
+        cursor: pointer;
+        border: solid 1px #BA68C8
+    }
+</style>
+
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-5 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                @if (Model.GioiTinh)
+                {
+                    <img class="rounded-circle mt-5" width="200" src="/Assets/Admin/img/undraw_profile_2.svg">
+                }
+                else
+                {
+                    <img class="rounded-circle mt-5" width="200" src="/Assets/Admin/img/undraw_profile_3.svg">
+                }
+                <span class="font-weight-bold" style="font-size:20px;">@Model.TaiKhoan</span>
+                <span> </span>
+            </div>
+        </div>
+        <div class="col-md-7 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Thông tin cá nhân</h4>
+                </div>
+                <div class="row mt-3">
+                    @using (Html.BeginForm("EditProfile", "Main", new { id = Model.TaiKhoan }, FormMethod.Post))
+                    {
+
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-horizontal">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.HoTen, htmlAttributes: new { @class = "control-label" })
+                                <div>
+                                    @Html.EditorFor(model => model.HoTen, new { htmlAttributes = new { @class = "form-control", @maxlength = "30" } })
+                                    <span class="text-danger">@ViewData["TrongHoTen"]</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.SoDT, htmlAttributes: new { @class = "control-label" })
+                                <div>
+                                    @Html.EditorFor(model => model.SoDT, new { htmlAttributes = new { @class = "form-control", @maxlength = "10", @type = "number", @min = "0", @step = "1" } })
+                                    <span class="text-danger">@ViewData["TrongSoDT"]</span>
+                                    <span class="text-danger">@ViewData["SaiSoDT"]</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.DiaChi, htmlAttributes: new { @class = "control-label" })
+                                <div>
+                                    @Html.EditorFor(model => model.DiaChi, new { htmlAttributes = new { @class = "form-control", @maxlength = "100" } })
+                                    <span class="text-danger">@ViewData["TrongDiaChi"]</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.NgaySinh, htmlAttributes: new { @class = "control-label" })
+                                <div>
+                                    @Html.EditorFor(model => model.NgaySinh, new { htmlAttributes = new { @class = "form-control", @type = "date", @value = Model.NgaySinh } })
+                                    <span class="text-danger">@ViewData["TrongNgaySinh"]</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.GioiTinh, htmlAttributes: new { @class = "control-label" })
+                                <div>
+                                    <div class="checkbox">
+                                        <span>Nam</span>
+                                        @Html.RadioButtonFor(model => model.GioiTinh, true)
+                                        <span style="margin-left:20px;">Nữ</span>
+                                        @Html.RadioButtonFor(model => model.GioiTinh, false)
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="mt-5 text-center">
+                                    <input type="submit" value="Lưu" class="btn btn-success" />
+                                    <a class="btn btn-google" href="@Url.Action("GetProfile", "Main", new { id = Model.TaiKhoan })">Hủy</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<p>
+    <a class="btn btn-primary" href="@Url.Action("Index", "Main")">Về trang chủ</a>
+</p>

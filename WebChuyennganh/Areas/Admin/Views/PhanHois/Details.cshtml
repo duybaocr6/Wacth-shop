@@ -1,0 +1,73 @@
+﻿@model WebChuyennganh.Models.PhanHoi
+
+@{
+    ViewBag.Title = "Chi tiết phản hồi";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="h3 mb-2 text-gray-800">Chi tiết phản hồi</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HoTen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoTen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayGui)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayGui)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChuDe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChuDe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoiDung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoiDung)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrangThai)
+        </dt>
+
+        <dd>
+            @if (Model.TrangThai)
+            {
+                <span>Đã đọc</span>
+            }
+            else
+            {
+                <span>Chưa đọc</span>
+            }
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a class="btn btn-warning" href="@Url.Action("Edit", "PhanHois", new { id = Model.MaPH })">Cập nhật</a> |
+    <a class="btn btn-primary" href="@Url.Action("Index", "PhanHois")">Về danh sách</a>
+</p>

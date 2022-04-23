@@ -1,0 +1,146 @@
+﻿@model WebChuyennganh.Models.PhieuNhap
+
+@{
+    ViewBag.Title = "Chỉnh sửa phiếu nhập";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    WebChuyennganh.Models.NhanVien nv = (WebChuyennganh.Models.NhanVien)Session["NhanVien"];
+}
+
+<h2 class="h3 mb-2 text-gray-800">Chỉnh sửa phiếu nhập</h2>
+
+@using (Html.BeginForm("Edit", "PhieuNhaps", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.SoPN)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MaNCC, "Nhà cung cấp", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("MaNCC", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.MaNCC, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TongSoNhap, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.TongSoNhap)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ThanhToan, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Model.ThanhToan.ToString("#,##0.00")
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TenTKLap, "Lập bởi", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.TenTKLap)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TenTKCapNhat, "Cập nhật bởi", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @nv.TaiKhoan
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NgayNhap, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.NgayNhap)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NgayCapNhat, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @String.Format("{0:dd/MM/yyyy}", DateTime.Today)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Lưu" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    <a class="btn btn-primary" href="@Url.Action("Index", "PhieuNhaps")">Về danh sách</a>
+</div>
+
+<h3 class="text-center">Danh sách chi tiết phiếu nhập</h3>
+
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark text-white text-center">
+        <tr>
+            <th>
+                Mã đồng hồ
+            </th>
+            <th>
+                Hình đại diện
+            </th>
+            <th>
+                Thương hiệu
+            </th>
+            <th>
+                Số lượng
+            </th>
+            <th>
+                Giá tiền
+            </th>
+            <th>
+                Thành tiền
+            </th>
+            <th>
+                Hành động
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.CTPhieuNhaps)
+        {
+        <tr>
+            <td>
+                @item.DongHo.MaDH
+            </td>
+            <td>
+                <img src="@Url.Content(item.DongHo.HinhDD)" style="max-width:120px;" />
+            </td>
+            <td>
+                @item.DongHo.ThuongHieu.TenTH
+            </td>
+            <td>
+                @item.SoLuong
+            </td>
+            <td>
+                @item.GiaTien.ToString("#,##0.00")
+            </td>
+            <td>
+                @item.ThanhTien.ToString("#,##0.00")
+            </td>
+            <td>
+                <a class="btn btn-warning" href="@Url.Action("Edit", "CTPhieuNhaps", new { id1 = item.SoPN, id2 = item.MaDH })">Chỉnh sửa</a> |
+                <a class="btn btn-danger" href="@Url.Action("Delete", "CTPhieuNhaps", new { id1 = item.SoPN, id2 = item.MaDH })">Xóa</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

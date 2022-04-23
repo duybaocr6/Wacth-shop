@@ -1,0 +1,166 @@
+E:\Huy\New folder\WebChuyennganh\bin\WebChuyennganh.dll.config
+E:\Huy\New folder\WebChuyennganh\bin\WebChuyennganh.dll
+E:\Huy\New folder\WebChuyennganh\bin\WebChuyennganh.pdb
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\csc.exe
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\csc.exe.config
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\csc.rsp
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\csi.exe
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\csi.exe.config
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\csi.rsp
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.AppContext.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.Collections.Immutable.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.Console.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.Globalization.Calendars.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.IO.Compression.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.IO.FileSystem.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.Net.Http.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.Net.Sockets.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.Reflection.Metadata.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.ValueTuple.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.Xml.XPath.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\vbc.exe
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\vbc.exe.config
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\vbc.rsp
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\VBCSCompiler.exe
+E:\Huy\New folder\WebChuyennganh\bin\roslyn\VBCSCompiler.exe.config
+E:\Huy\New folder\WebChuyennganh\bin\Antlr3.Runtime.dll
+E:\Huy\New folder\WebChuyennganh\bin\EntityFramework.dll
+E:\Huy\New folder\WebChuyennganh\bin\EntityFramework.SqlServer.dll
+E:\Huy\New folder\WebChuyennganh\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Huy\New folder\WebChuyennganh\bin\Microsoft.Web.Infrastructure.dll
+E:\Huy\New folder\WebChuyennganh\bin\Newtonsoft.Json.dll
+E:\Huy\New folder\WebChuyennganh\bin\System.Web.Helpers.dll
+E:\Huy\New folder\WebChuyennganh\bin\System.Web.Mvc.dll
+E:\Huy\New folder\WebChuyennganh\bin\System.Web.Optimization.dll
+E:\Huy\New folder\WebChuyennganh\bin\System.Web.Razor.dll
+E:\Huy\New folder\WebChuyennganh\bin\System.Web.WebPages.Deployment.dll
+E:\Huy\New folder\WebChuyennganh\bin\System.Web.WebPages.dll
+E:\Huy\New folder\WebChuyennganh\bin\System.Web.WebPages.Razor.dll
+E:\Huy\New folder\WebChuyennganh\bin\WebGrease.dll
+E:\Huy\New folder\WebChuyennganh\bin\EntityFramework.xml
+E:\Huy\New folder\WebChuyennganh\bin\EntityFramework.SqlServer.xml
+E:\Huy\New folder\WebChuyennganh\bin\System.Web.Helpers.xml
+E:\Huy\New folder\WebChuyennganh\bin\System.Web.Mvc.xml
+E:\Huy\New folder\WebChuyennganh\bin\System.Web.Optimization.xml
+E:\Huy\New folder\WebChuyennganh\bin\System.Web.Razor.xml
+E:\Huy\New folder\WebChuyennganh\bin\System.Web.WebPages.xml
+E:\Huy\New folder\WebChuyennganh\bin\System.Web.WebPages.Deployment.xml
+E:\Huy\New folder\WebChuyennganh\bin\System.Web.WebPages.Razor.xml
+E:\Huy\New folder\WebChuyennganh\bin\Newtonsoft.Json.xml
+E:\Huy\New folder\WebChuyennganh\bin\Antlr3.Runtime.pdb
+E:\Huy\New folder\WebChuyennganh\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Huy\New folder\WebChuyennganh\obj\Release\WebChuyennganh.csproj.AssemblyReference.cache
+E:\Huy\New folder\WebChuyennganh\obj\Release\WebChuyennganh.csproj.CoreCompileInputs.cache
+E:\Huy\New folder\WebChuyennganh\obj\Release\WebChuyennganh.csproj.CopyComplete
+E:\Huy\New folder\WebChuyennganh\obj\Release\WebChuyennganh.dll
+E:\Huy\New folder\WebChuyennganh\obj\Release\WebChuyennganh.pdb
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\WebChuyennganh.dll.config
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\WebChuyennganh.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\WebChuyennganh.pdb
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\csc.exe
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\csc.exe.config
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\csc.rsp
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\csi.exe
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\csi.exe.config
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\csi.rsp
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.AppContext.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.Collections.Immutable.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.Console.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.Globalization.Calendars.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.IO.Compression.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.IO.FileSystem.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.Net.Http.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.Net.Sockets.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.Reflection.Metadata.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.ValueTuple.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.Xml.XPath.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\vbc.exe
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\vbc.exe.config
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\vbc.rsp
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\VBCSCompiler.exe
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\roslyn\VBCSCompiler.exe.config
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\Antlr3.Runtime.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\EntityFramework.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\EntityFramework.SqlServer.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\Microsoft.Web.Infrastructure.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\Newtonsoft.Json.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\System.Web.Helpers.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\System.Web.Mvc.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\System.Web.Optimization.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\System.Web.Razor.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\System.Web.WebPages.Deployment.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\System.Web.WebPages.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\System.Web.WebPages.Razor.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\WebGrease.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\EntityFramework.xml
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\EntityFramework.SqlServer.xml
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\System.Web.Helpers.xml
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\System.Web.Mvc.xml
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\System.Web.Optimization.xml
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\System.Web.Razor.xml
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\System.Web.WebPages.xml
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\System.Web.WebPages.Deployment.xml
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\System.Web.WebPages.Razor.xml
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\Newtonsoft.Json.xml
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\Antlr3.Runtime.pdb
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\obj\Release\WebChuyennganh.csproj.AssemblyReference.cache
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\obj\Release\WebChuyennganh.csproj.CoreCompileInputs.cache
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\obj\Release\WebChuyennganh.csproj.CopyComplete
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\obj\Release\WebChuyennganh.dll
+E:\Huy\Đồ án cơ sở\Project\WebChuyennganh\obj\Release\WebChuyennganh.pdb

@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_LayoutError.cshtml";
+}
+
+<div class="men">
+    <div class="container">
+        <div class="grid_1">
+            <h1>Contact Info</h1>
+            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum</p>
+        </div>
+        <div class="grid_4">
+            <div class="grid_2 preffix_1">
+                <ul class="iphone">
+                    <i class="phone"> </i>
+                    <li class="phone_desc">Phone : +1 800 245 2365 </li>
+                    <div class="clearfix"> </div>
+                </ul>
+                <ul class="iphone">
+                    <i class="flag"> </i>
+                    <li class="phone_desc">Website : <a href="mailto:mail@demolink.org">www.demolink.com</a></li>
+                    <div class="clearfix"> </div>
+                </ul>
+            </div>
+            <div class="grid_3">
+                <ul class="iphone">
+                    <i class="msg"> </i>
+                    <li class="phone_desc">Email : <a href="mailto:mail@demolink.org">mail(at)watches.com</a> </li>
+                    <div class="clearfix"> </div>
+                </ul>
+                <ul class="iphone">
+                    <i class="home"> </i>
+                    <li class="phone_desc">Address : vel illum dolore eu feugiat nulla </li>
+                    <div class="clearfix"> </div>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            <div class="contact_form">
+                <h2>Feedback</h2>
+                <form>
+                    <div class="col-md-6 to">
+                        <div>
+                            @Html.TextBox("HoTen", "Name")
+                            @ViewData["Loi2"]
+                        </div>
+                        <div>
+                            @Html.TextBox("Email", "Email")
+                            @ViewData["Loi5"]
+                        </div>
+                        <div>
+                            @Html.TextBox("ChuDe", "Subject")
+                            @ViewData["Loi3"]
+                        </div>
+                    </div>
+                    <div class="col-md-6 text">
+                        <div>
+                            @Html.TextArea("NoiDung", "Message", new { style = "height:175px" })
+                            @ViewData["Loi4"]
+                        </div>
+                        @*<textarea style="height:242px" value="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>*@
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="but__center"><input type="submit" value="Send message &gt;&gt;"></div>
+                </form>
+            </div>
+        }
+        </div>
+</div>
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3150859.767904157!2d-96.62081048651531!3d39.536794757966845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1408111832978"> </iframe>
+</div>

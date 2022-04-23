@@ -1,0 +1,74 @@
+﻿@model IEnumerable<WebChuyennganh.Models.DonHang>
+
+@{
+    ViewBag.Title = "Đơn hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Raw(TempData["message"])
+
+<h2 class="h3 mb-2 text-gray-800">Danh sách đơn hàng</h2>
+
+<div class="card shadow mb-4">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>
+                            Số đơn hàng
+                        </th>
+                        <th>
+                            Khách hàng
+                        </th>
+                        <th>
+                            Ngày đặt
+                        </th>
+                        <th>
+                            Tổng số mua
+                        </th>
+                        <th>
+                            Thanh toán
+                        </th>
+                        <th>
+                            Trạng thái
+                        </th>
+                        <th>
+                            Hành động
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SoDH)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.KhachHang.TaiKhoan)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NgayDat)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TongSoMua)
+                        </td>
+                        <td>
+                            @item.ThanhToan.ToString("#,##0.00")
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TrangThai.TenTT)
+                        </td>
+                        <td>
+                            <a class="btn btn-info" href="@Url.Action("Details", "DonHangs", new { id = item.SoDH })">Chi tiết</a> |
+                            <a class="btn btn-warning" href="@Url.Action("Edit", "DonHangs", new { id = item.SoDH })">Chỉnh sửa</a> |
+                            <a class="btn btn-danger" href="@Url.Action("Delete", "DonHangs", new { id = item.SoDH })">Xóa</a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

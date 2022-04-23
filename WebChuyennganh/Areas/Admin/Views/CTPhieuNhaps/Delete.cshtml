@@ -1,0 +1,73 @@
+﻿@model WebChuyennganh.Models.CTPhieuNhap
+
+@{
+    ViewBag.Title = "Xóa mặt hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="h3 mb-2 text-gray-800">Xóa mặt hàng khỏi phiếu nhập</h2>
+
+<h5>Bạn có chắc muốn xóa đối tượng?</h5>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PhieuNhap.SoPN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhieuNhap.SoPN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DongHo.MaDH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DongHo.MaDH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DongHo.HinhDD)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.DongHo.HinhDD)" style="max-width:140px;" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaTien)
+        </dt>
+
+        <dd>
+            @Model.GiaTien.ToString("#,##0.00")
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThanhTien)
+        </dt>
+
+        <dd>
+            @Model.ThanhTien.ToString("#,##0.00")
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xác nhận" class="btn btn-success" /> |
+            <a class="btn btn-google" href="@Url.Action("Edit", "PhieuNhaps", new { id = Model.SoPN })">Hủy</a>
+        </div>
+    }
+</div>

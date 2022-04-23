@@ -1,0 +1,53 @@
+﻿@model IEnumerable<WebChuyennganh.Models.ThuongHieu>
+
+@{
+    ViewBag.Title = "Thương hiệu";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="h3 mb-2 text-gray-800">Danh sách thương hiệu</h2>
+
+<p>
+    <a class="btn btn-success" href="@Url.Action("Create", "ThuongHieux")">Thêm mới</a>
+</p>
+
+<div class="card shadow mb-4">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>
+                            Thương hiệu
+                        </th>
+                        <th>
+                            Logo
+                        </th>
+                        <th>
+                            Hành động
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>
+                            <a href="@Url.Action("Details", "ThuongHieux", new { id = item.MaTH })">
+                                @Html.DisplayFor(modelItem => item.TenTH)
+                            </a>
+                        </td>
+                        <td>
+                            <img src="@Url.Content(item.HinhDD)" style="max-width:120px;" />
+                        </td>
+                        <td>
+                            <a class="btn btn-warning" href="@Url.Action("Edit", "ThuongHieux", new { id = item.MaTH })">Chỉnh sửa</a> |
+                            <a class="btn btn-danger" href="@Url.Action("Delete", "ThuongHieux", new { id = item.MaTH })">Xóa</a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

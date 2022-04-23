@@ -1,0 +1,170 @@
+﻿@model WebChuyennganh.Models.DonHang
+
+@{
+    ViewBag.Title = "Cập nhật đơn hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    WebChuyennganh.Models.NhanVien nv = (WebChuyennganh.Models.NhanVien)Session["NhanVien"];
+}
+
+<h2 class="h3 mb-2 text-gray-800">Cập nhật đơn hàng</h2>
+
+@using (Html.BeginForm("Edit", "DonHangs", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.SoDH)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TaiKhoanKH, "Tài khoản khách hàng", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.TaiKhoanKH, null, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.TaiKhoanKH, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TaiKhoanNV, "Tài khoản Nhân viên", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @nv.TaiKhoan
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NgayDat, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.NgayDat, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NgayDat, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NgayGiao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NgayGiao, new { htmlAttributes = new { @class = "form-control", type = "date" } })
+                @Html.ValidationMessageFor(model => model.NgayGiao, "", new { @class = "text-danger" })
+                <span class="text-danger">@ViewData["TrongNgayGiao"]</span>
+                <span class="text-danger">@ViewData["SaiNgayGiao"]</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SoDT, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.SoDT, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SoDT, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DiaChi, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.DiaChi, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DiaChi, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TongSoMua, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.TongSoMua, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TongSoMua, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ThanhToan, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Model.ThanhToan.ToString("#,##0.00")
+                @Html.ValidationMessageFor(model => model.ThanhToan, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.GhiChu, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.GhiChu, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.GhiChu, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MaTT, "Trạng thái", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("MaTT", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.MaTT, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Lưu" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    <a class="btn btn-primary" href="@Url.Action("Index", "DonHangs")">Về danh sách</a>
+</div>
+
+<h3 class="text-center">Danh sách chi tiết đơn hàng</h3>
+
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark text-white text-center">
+        <tr>
+            <th>
+                Mã đồng hồ
+            </th>
+            <th>
+                Hình đại diện
+            </th>
+            <th>
+                Thương hiệu
+            </th>
+            <th>
+                Số lượng
+            </th>
+            <th>
+                Giá tiền
+            </th>
+            <th>
+                Thành tiền
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.CTDonHangs)
+        {
+            <tr>
+                <td>
+                    @item.DongHo.MaDH
+                </td>
+                <td>
+                    <img src="@Url.Content(item.DongHo.HinhDD)" style="max-width:120px;" />
+                </td>
+                <td>
+                    @item.DongHo.ThuongHieu.TenTH
+                </td>
+                <td>
+                    @item.SoLuong
+                </td>
+                <td>
+                    @item.GiaTien.ToString("#,##0.00")
+                </td>
+                <td>
+                    @item.ThanhTien.ToString("#,##0.00")
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
